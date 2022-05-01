@@ -33,7 +33,6 @@ int main(int argc, char **argv) {
     char nameArray [lineCount][50];
     int weightArray [lineCount];
 
-    //Read the file once more, this time to fill in the data into memory
     fseek(fp, 0, SEEK_SET);// rewind to the beginning of the file, before reading it line by line.
     char word[BUFSIZE]; //to be used for reading lines in the loop below
     int weight;
@@ -104,17 +103,7 @@ int main(int argc, char **argv) {
         }
     }
 
-    //close the input file
     fclose(fp);
-
-    //Now it is your turn to do the magic!!!
-    //do search/sort/print, whatever you think you need to do to satisfy the requirements of the assignment!
-    //don't forget to free the memory before you quit the program!
-
-    //OUTPUT SPECS:
-    // use the following if no word to suggest: printf("No suggestion!\n");
-    // use the following to print a single line of outputs (assuming that the word and weight are stored in variables named word and weight, respectively): printf("%s %d\n",word,weight);
-    // if there are more than 10 outputs to print, you should print top weighted 10 outputs.
 
     return 0;
 }
